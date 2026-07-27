@@ -743,7 +743,7 @@ Show an example conversation where the AI agent automatically invokes the correc
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/Deepak-gogula03/repo2.git
+git clone https://github.com/Deepak-gogula03/Production-Ready-Multi-Server-Model-Context-Protocol-MCP.git
 ```
 
 ---
@@ -751,7 +751,7 @@ git clone https://github.com/Deepak-gogula03/repo2.git
 ## Navigate to the Project
 
 ```bash
-cd repo2
+cd Production-Ready-Multi-Server-Model-Context-Protocol-MCP
 ```
 
 ---
@@ -853,7 +853,7 @@ Open the notebook and execute all cells sequentially to explore the complete MCP
 # 📁 Project Structure
 
 ```text
-repo2/
+Production-Ready-Multi-Server-Model-Context-Protocol-MCP/
 │
 ├── math_server.py
 ├── weather_server.py
@@ -1057,21 +1057,6 @@ These architectural patterns form the foundation for building scalable, maintain
 
 ---
 
-# 🤝 Contributing
-
-Contributions are welcome!
-
-If you'd like to improve this project, feel free to:
-
-- Fork the repository
-- Create a new feature branch
-- Commit your changes
-- Open a Pull Request
-
-Suggestions, bug reports, and feature requests are always appreciated.
-
----
-
 # 📜 License
 
 This project is licensed under the **MIT License**.
@@ -1079,17 +1064,3 @@ This project is licensed under the **MIT License**.
 You are free to use, modify, and distribute this project in accordance with the terms of the license.
 
 ---
-
-# ⭐ Support
-
-If you found this project helpful, please consider giving it a **⭐ Star** on GitHub.
-
-Your support helps increase the visibility of the project and encourages continued development.
-
----
-
-# 👨‍💻 Author
-
-**Deepak Gogula**
-
-If you're interested in AI Engineering, Agentic AI, LangGraph, LangChain, or the Model Context Protocol, feel free to connect and explore the repository.
