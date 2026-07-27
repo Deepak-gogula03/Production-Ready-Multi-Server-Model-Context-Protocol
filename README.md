@@ -10,24 +10,6 @@ The repository illustrates how the **Model Context Protocol (MCP)** simplifies A
 
 ---
 
-<p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-
-![FastMCP](https://img.shields.io/badge/FastMCP-MCP_Server-orange)
-
-![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_AI-green)
-
-![LangChain](https://img.shields.io/badge/LangChain-Framework-success)
-
-![Groq](https://img.shields.io/badge/Groq-Llama_3.3-red)
-
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-</p>
-
----
-
 # 📑 Table of Contents
 
 - 🌟 Project Highlights
@@ -50,9 +32,6 @@ The repository illustrates how the **Model Context Protocol (MCP)** simplifies A
 - 📖 Learning Outcomes
 - 📜 License
 
----
-
-# 🌟 Project Highlights
 ---
 
 # 🌟 Project Highlights
@@ -517,8 +496,6 @@ The implementation demonstrates how the same MCP servers can support different d
 
 ---
 
-# ⚙️ Technical Implementation
-
 # ⚡ Technology Stack at a Glance
 
 | Layer | Technology | Responsibility |
@@ -532,6 +509,7 @@ The implementation demonstrates how the same MCP servers can support different d
 | Communication | Model Context Protocol (MCP) | Standardized communication between AI agents and external tools |
 | Transport | STDIO & Streamable HTTP | Local and remote communication mechanisms |
 | Development Environment | Jupyter Notebook | Interactive experimentation and development |
+
 This project demonstrates how modern **AI applications** can leverage the **Model Context Protocol (MCP)** to securely communicate with external tools through standardized interfaces.
 
 ---
