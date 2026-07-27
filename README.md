@@ -1010,14 +1010,13 @@ Open the notebook and execute all cells sequentially to explore the complete MCP
 ```text
 Production-Ready-Multi-Server-Model-Context-Protocol-MCP/
 │
-├── math_server.py
-├── weather_server.py
+├── mathserver.py
+├── weather.py
 ├── client.py
-├── notebook.ipynb
 ├── requirements.txt
 ├── README.md
-├── .env.example
-└── screenshots/
+├── .env
+
 ```
 
 ---
