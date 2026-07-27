@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="ChatGPT Image Jul 27, 2026, 08_06_06 PM" src="https://github.com/user-attachments/assets/77811058-10c3-417e-9c89-9c0b21f3d643" /># 🚀 Production-Ready Multi-Server Model Context Protocol (MCP) Platform using FastMCP, LangGraph, LangChain & Groq Llama 3.3
+# 🚀 Production-Ready Multi-Server Model Context Protocol (MCP) Platform using FastMCP, LangGraph, LangChain & Groq Llama 3.3
 
 A production-oriented **Model Context Protocol (MCP)** platform that demonstrates how modern AI assistants can securely discover, invoke, and orchestrate multiple external tools through standardized MCP servers.
 
