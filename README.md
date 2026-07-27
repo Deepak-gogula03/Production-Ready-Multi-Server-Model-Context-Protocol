@@ -1,4 +1,4 @@
-# 🚀 Production-Ready Multi-Server Model Context Protocol (MCP) Platform using FastMCP, LangGraph, LangChain & Groq Llama 3.3
+<img width="1536" height="1024" alt="ChatGPT Image Jul 27, 2026, 08_06_06 PM" src="https://github.com/user-attachments/assets/77811058-10c3-417e-9c89-9c0b21f3d643" /># 🚀 Production-Ready Multi-Server Model Context Protocol (MCP) Platform using FastMCP, LangGraph, LangChain & Groq Llama 3.3
 
 A production-oriented **Model Context Protocol (MCP)** platform that demonstrates how modern AI assistants can securely discover, invoke, and orchestrate multiple external tools through standardized MCP servers.
 
@@ -333,9 +333,8 @@ The architecture separates reasoning, communication, and execution into independ
 
 This diagram provides a high-level overview of the complete AI workflow.
 
-<p align="center">
-<img src="Architecture/System_Architecture.png" width="100%">
-</p>
+<img width="1536" height="1024" alt="ChatGPT Image Jul 27, 2026, 08_06_06 PM" src="https://github.com/user-attachments/assets/ecc23a15-e8aa-4b8f-97a7-87515866772c" />
+
 
 The workflow begins with the user's request, which is processed by the LangGraph ReAct Agent. The agent communicates with the LangChain MultiServerMCPClient to dynamically discover and invoke tools exposed by independent FastMCP servers. The execution results are returned to the agent, which generates the final natural language response.
 
@@ -345,9 +344,8 @@ The workflow begins with the user's request, which is processed by the LangGraph
 
 This diagram illustrates the complete communication lifecycle between the AI agent and MCP servers.
 
-<p align="center">
-<img src="Architecture/MCP_Communication_Flow.png" width="95%">
-</p>
+<img width="1536" height="1024" alt="ChatGPT Image Jul 27, 2026, 08_09_43 PM" src="https://github.com/user-attachments/assets/c7896812-b3b5-40c4-8968-c741f9fb40a5" />
+
 
 The MCP client automatically discovers available tools, selects the appropriate server, invokes the requested capability, and returns the execution result back to the AI agent through standardized MCP communication.
 
