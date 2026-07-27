@@ -10,6 +10,51 @@ The repository illustrates how the **Model Context Protocol (MCP)** simplifies A
 
 ---
 
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+
+![FastMCP](https://img.shields.io/badge/FastMCP-MCP_Server-orange)
+
+![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_AI-green)
+
+![LangChain](https://img.shields.io/badge/LangChain-Framework-success)
+
+![Groq](https://img.shields.io/badge/Groq-Llama_3.3-red)
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+</p>
+
+---
+
+# 📑 Table of Contents
+
+- 🌟 Project Highlights
+- 📖 Overview
+- 🎯 Project Objective
+- 💼 Business Problem
+- 💡 Solution
+- 🏗️ Architecture Evolution
+- 🏗️ System Architecture
+- ⚙️ Technical Implementation
+- 🔄 End-to-End Workflow
+- 📸 Screenshots
+- 📥 Installation
+- 📁 Project Structure
+- 📚 Concepts Covered
+- 🧩 Engineering Challenges
+- 🎯 Skills Demonstrated
+- 🛠 Technology Stack
+- 🚀 Future Enhancements
+- 📖 Learning Outcomes
+- 📜 License
+
+---
+
+# 🌟 Project Highlights
+---
+
 # 🌟 Project Highlights
 
 ## 🚀 What This Project Demonstrates
@@ -299,8 +344,70 @@ These architectural patterns closely resemble how modern enterprise AI platforms
 
 # 🏗️ System Architecture
 
-This repository demonstrates a complete Model Context Protocol ecosystem consisting of independent MCP servers, a centralized MCP client, and an intelligent AI agent.
+The following architecture diagrams illustrate how the **LangGraph ReAct Agent**, **LangChain MultiServerMCPClient**, and multiple **FastMCP Servers** collaborate to process user requests using the **Model Context Protocol (MCP)**.
 
+The architecture separates reasoning, communication, and execution into independent components, making the system modular, extensible, and suitable for production-oriented AI applications.
+
+---
+
+# 🖼️ Overall System Architecture
+
+This diagram provides a high-level overview of the complete AI workflow.
+
+<p align="center">
+<img src="Architecture/System_Architecture.png" width="100%">
+</p>
+
+The workflow begins with the user's request, which is processed by the LangGraph ReAct Agent. The agent communicates with the LangChain MultiServerMCPClient to dynamically discover and invoke tools exposed by independent FastMCP servers. The execution results are returned to the agent, which generates the final natural language response.
+
+---
+
+# 🖼️ Multi-Server MCP Communication Flow
+
+This diagram illustrates the complete communication lifecycle between the AI agent and MCP servers.
+
+<p align="center">
+<img src="Architecture/MCP_Communication_Flow.png" width="95%">
+</p>
+
+The MCP client automatically discovers available tools, selects the appropriate server, invokes the requested capability, and returns the execution result back to the AI agent through standardized MCP communication.
+
+---
+
+# 🖼️ Multi-Server Deployment Architecture
+
+This deployment diagram demonstrates how multiple MCP servers can operate independently while serving a common AI application.
+
+<p align="center">
+<img src="Architecture/Deployment_Architecture.png" width="95%">
+</p>
+
+Each FastMCP server can be developed, deployed, updated, and scaled independently, allowing organizations to build modular AI ecosystems where new capabilities can be introduced without modifying existing services.
+
+---
+
+# 🖼️ End-to-End Workflow
+
+The following workflow summarizes the complete execution pipeline from the user's request to the generated response.
+
+<p align="center">
+<img src="Architecture/Workflow.png" width="95%">
+</p>
+
+The intelligent agent performs reasoning, determines whether external tools are required, discovers available MCP tools, invokes the appropriate server, receives the execution result, and synthesizes a final response for the user.
+
+---
+
+# ✨ Key Architectural Highlights
+
+- Standardized communication through the Model Context Protocol (MCP)
+- Intelligent reasoning using LangGraph ReAct Agents
+- Dynamic tool discovery with LangChain MultiServerMCPClient
+- Independent FastMCP Servers exposing reusable capabilities
+- Modular architecture supporting scalable AI ecosystems
+- Multiple transport mechanisms including STDIO and Streamable HTTP
+- Clear separation between reasoning, communication, and execution
+- Production-oriented architecture following modern AI engineering principles
 ---
 
 # 1️⃣ Overall System Architecture
@@ -408,9 +515,26 @@ Suitable for distributed deployments where MCP servers run as standalone network
 
 The implementation demonstrates how the same MCP servers can support different deployment strategies without changing the tool implementations.
 
+---
+
 # ⚙️ Technical Implementation
 
+# ⚡ Technology Stack at a Glance
+
+| Layer | Technology | Responsibility |
+|--------|------------|----------------|
+| Programming Language | Python | Core application development |
+| AI Framework | LangGraph | AI agent orchestration and reasoning |
+| MCP Framework | FastMCP | Building MCP-compliant servers |
+| LLM Integration | LangChain | MCP client integration and tool management |
+| Language Model | Groq Llama 3.3 | Natural language reasoning and decision making |
+| MCP Client | MultiServerMCPClient | Connects to multiple MCP servers simultaneously |
+| Communication | Model Context Protocol (MCP) | Standardized communication between AI agents and external tools |
+| Transport | STDIO & Streamable HTTP | Local and remote communication mechanisms |
+| Development Environment | Jupyter Notebook | Interactive experimentation and development |
 This project demonstrates how modern **AI applications** can leverage the **Model Context Protocol (MCP)** to securely communicate with external tools through standardized interfaces.
+
+---
 
 Instead of embedding every capability directly inside the AI application, independent **FastMCP Servers** expose reusable tools while a **LangGraph ReAct Agent** performs reasoning and dynamically invokes the appropriate tool through the **LangChain MultiServerMCPClient**.
 
@@ -425,6 +549,42 @@ The implementation consists of the following major components:
 - Dynamic Tool Discovery
 - Multiple Communication Transports
 - Independent Tool Execution
+
+---
+
+# 🔄 Execution Pipeline
+
+The complete execution flow of the application can be summarized as follows:
+
+```text
+User Query
+      │
+      ▼
+LangGraph ReAct Agent
+      │
+      ▼
+Reasoning & Tool Selection
+      │
+      ▼
+LangChain MultiServerMCPClient
+      │
+      ▼
+Discover Available MCP Tools
+      │
+      ▼
+Invoke Appropriate FastMCP Server
+      │
+      ▼
+Execute Tool
+      │
+      ▼
+Return Result
+      │
+      ▼
+Generate Final Response
+```
+
+This pipeline highlights the clear separation between reasoning, communication, and execution while demonstrating how the Model Context Protocol enables standardized interactions between AI agents and external tools.
 
 ---
 
@@ -524,7 +684,11 @@ This enables intelligent decision-making while keeping the reasoning process ind
 
 One of the major advantages of MCP is **dynamic tool discovery**.
 
-Instead of hardcoding every available capability inside the application, the MCP client automatically retrieves tool metadata from connected servers.
+One of the defining features of the Model Context Protocol is **Dynamic Tool Discovery**.
+
+Instead of hardcoding tool definitions inside the AI application, the MultiServerMCPClient automatically queries connected MCP servers, retrieves metadata for every exposed capability, and makes those tools immediately available to the LangGraph agent.
+
+This design enables plug-and-play extensibility where additional MCP servers can be introduced without modifying the application's reasoning logic.
 
 This allows AI applications to:
 
@@ -696,6 +860,21 @@ Each tool is intentionally designed to be independent, reusable, and discoverabl
                       ▼
                  Return to User
 ```
+
+---
+
+| Step | Description |
+|------|-------------|
+| 1 | User submits a natural language request |
+| 2 | LangGraph ReAct Agent analyzes the request |
+| 3 | MultiServerMCPClient discovers available MCP tools |
+| 4 | The most appropriate tool is selected |
+| 5 | The corresponding FastMCP server executes the request |
+| 6 | Execution result is returned through MCP |
+| 7 | The AI agent synthesizes a natural language response |
+
+---
+
 # 📸 Screenshots
 
 ## 🤖 Math MCP Server
